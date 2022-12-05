@@ -34,8 +34,7 @@ public class WebSecurityConfig  {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http, PasswordEncoder bCryptPasswordEncoder) throws Exception {
         http.authorizeRequests().antMatchers("/login").permitAll()
-                .antMatchers("/employee/**").hasAnyAuthority("Employee", "Administrator")
-                .antMatchers("/app/**").hasAnyAuthority("Administrator")
+                .antMatchers("/**").hasAnyAuthority("Employee", "Admin")
                 .anyRequest().authenticated()
                 .and()
                 .logout().permitAll();

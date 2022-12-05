@@ -41,7 +41,7 @@ public class EmployeeController {
         return employeeService.getEmployeeById(employeeId);
     }
 
-    @PostMapping("saveUpdateEmployee")
+    @GetMapping("saveUpdateEmployee")
     public EmployeePresenter saveUpdateEmployee(@RequestBody @NotNull EmployeePresenter employeePresenter) {
         return employeeService.saveUpdateEmployee(employeePresenter);
     }

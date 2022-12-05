@@ -30,7 +30,6 @@ public class EmployeeVaccine {
 
     @ManyToOne
     @JoinColumn(name = "employee_id")
-    @NotNull
     private Employee employee;
 
     @ManyToOne
